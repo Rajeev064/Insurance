@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+        form{
+          width: 50%;
+          margin-top: 55px;
+          margin-left: 430px;
+          
+        }
+
+    </style>
+  </head>
+  <body>
+    {% include "insurance/navbar.html" %}
+ 
+
+
+<br><br><br><br><br>
+<h2 style="text-align: center;color: red;">CUSTOMER SIGNUP</h2>
+<h4 style="text-align: center;color: rgb(76, 0, 255);">Create a New Account</h4>
+
+<form method="POST" autocomplete="off" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="username"><b>Username</b></label>
+        {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="username" %}
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4"><b>Password</b></label>
+        {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="password" %}
+      </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="first_name"><b>First Name</b></label>
+          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="First Name" %}
+        </div>
+        <div class="form-group col-md-6">
+          <label for="last_name"><b>Last Name</b></label>
+          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Last Name" %}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="mobile"><b>Mobile</b></label>
+          {% render_field customerForm.mobile|attr:'required:true'  class="form-control" placeholder="Mobile" %}
+        </div>
+        <div class="form-group col-md-6">
+          <label for="address"><b>Address</b></label>
+          {% render_field customerForm.address|attr:'required:true'  class="form-control" placeholder="Address" %}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="profile_pic"><b>Profile Picture</b></label>
+          {% render_field customerForm.profile_pic|attr:'required:true' class="form-control" placeholder="" %}
+        </div>
+        
+      </div>
+
+      <center> <p> ☑ I am agreed to all terms & conditions. </p></center>
+
+   <center> <button type="submit" class="btn btn-primary">Create my Account</button></center>
+  </form>
+
+
+<br><br>
+{% include "insurance/footer.html" %}
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<style>
+        .xyz{
+          margin-bottom: 0px;
+          background-image: url('{% static "image/homepage.jpg" %}');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+</style>
+<body>
+  {% include "insurance/navbar.html" %}
+<br>
+<section id="section-jumbotron" style="margin-bottom: 0px;" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center xyz">
+  <div class="container text-center">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+  </div>  
+</section>
+<br>
+<div>
+  <center>
+  <button type="button" class="btn btn-light">
+    <a href="http://127.0.0.1:8000/customer/customerclick">Apply Now</a>
+  </button>
+  </center>
+</div>
+<br>
+<div class="jumbotron" style="margin-top: 0px;margin-bottom: 0px;">
+
+  <p class="lead text-center"> If a child, a spouse, a life partner or a parent depends on you and your income, you need life insurance. 
+    </p>
+  
+  <p class="text-center">– Suze Orman</p>
+  
+</div>
+
+<div>
+
+<center><img src="https://www.fastnewsfeed.com/wp-content/uploads/2021/04/banner-health-insurance-service_107791-2742.jpeg" width="500px">
+ </center> 
+ <br><br>
+
+</div>
+
+
+  {% include "insurance/footer.html" %}
+
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+How to run the system?
+
+In order to run this system on your device, 
+first of all you have to extract the zip file. 
+Then, you have to go to the directory named “insurancemanagement-master”. 
+There is requirements file in this directory.
+ Then, You have to install these requirements either using
+pip install -r requirements.txt 
+or installing it one by 
+  one using pip command. Then run the command python3 manage.py migrate. 
+  You can create admin account from the command python3 manage.py createsuperuser. 
+  Finally, run the server using the command python3 manage.py runserver.
+   You will get the desired output.
+
+
+pip install -r requirements.txt 
+python manage.py migrate
+python manage.py createsuperuser
+
+python manage.py runserver
+
+admin acc = username - head 
+                    password - head

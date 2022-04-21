@@ -1,0 +1,22 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% include "insurance/navbar.html" %}
+    <br><br><br><br><br>
+<img src="{% static "image/logout_img.png" %}"  style="width:1200px; height:440px; padding-left:300px;">
+
+<br><br><br>
+<center>
+<button type="button" class="btn btn-outline-dark" border-radius: 50%;><a href="/customer/customerclick" class="nav-item nav-link"><b>Click here to Customer Login</b></a></button>
+</center>
+<br><br><br><br><br>
+<br><br>
+{% include "insurance/footer.html" %}
+
+  </body>
+</html>
